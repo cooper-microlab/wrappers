@@ -1,0 +1,31 @@
+#!/bin/sh
+# ulab-pass -- wrapper for pass
+# Copyright (C) 2022  Jacob Koziej <jacobkoziej@gmail.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+PASSWORD_STORE_DIR="${ULAB_PASSWORD_STORE_DIR:-$HOME/.ulab-password-store}"
+PASSWORD_STORE_KEY="${ULAB_PASSWORD_STORE_KEY:-}"
+PASSWORD_STORE_GPG_OPTS="${ULAB_PASSWORD_STORE_GPG_OPTS:-}"
+PASSWORD_STORE_X_SELECTION="${ULAB_PASSWORD_STORE_X_SELECTION:-}"
+PASSWORD_STORE_CLIP_TIME="${ULAB_PASSWORD_STORE_CLIP_TIME:-}"
+PASSWORD_STORE_UMASK="${ULAB_PASSWORD_STORE_UMASK:-}"
+PASSWORD_STORE_GENERATED_LENGTH="${ULAB_PASSWORD_STORE_GENERATED_LENGTH:-32}"
+PASSWORD_STORE_CHARACTER_SET="${ULAB_PASSWORD_STORE_CHARACTER_SET:-}"
+PASSWORD_STORE_CHARACTER_SET_NO_SYMBOLS="${ULAB_PASSWORD_STORE_CHARACTER_SET_NO_SYMBOLS:-}"
+PASSWORD_STORE_ENABLE_EXTENSIONS="${ULAB_PASSWORD_STORE_ENABLE_EXTENSIONS:-}"
+PASSWORD_STORE_EXTENSIONS_DIR="${ULAB_PASSWORD_STORE_EXTENSIONS_DIR:-}"
+PASSWORD_STORE_SIGNING_KEY="${ULAB_PASSWORD_STORE_SIGNING_KEY:-}"
+
+exec pass "$@"
